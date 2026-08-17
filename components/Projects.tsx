@@ -17,21 +17,18 @@ export const Projects: React.FC = () => {
           subtitle="Real-world Data Science & AI engineering applications designed for practical enterprise workflows."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-          {/* Main Featured Project Card (Spans 8 or 12 cols) */}
-          <div className="lg:col-span-8">
-            {portfolioData.projects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {portfolioData.projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
 
-          {/* More Projects Coming Soon Card (Spans 4 cols) */}
+          {/* More Projects Coming Soon Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-4 glass-card rounded-2xl p-6 sm:p-8 border border-dashed border-slate-800 hover:border-purple-500/40 transition-all flex flex-col justify-between items-center text-center relative overflow-hidden group"
+            className="glass-card rounded-2xl p-6 sm:p-8 border border-dashed border-slate-800 hover:border-purple-500/40 transition-all flex flex-col justify-between items-center text-center relative overflow-hidden group min-h-[400px]"
           >
             <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 my-6 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all shadow-lg shadow-purple-500/10">
               <Rocket className="w-8 h-8" />

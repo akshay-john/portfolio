@@ -79,6 +79,38 @@ export const portfolioData: PortfolioData = {
       ],
       githubUrl: "https://github.com/Cynux-Era-LLP/AI-Chatbot-for-college-helpdesk.git",
       isFeatured: true,
+      categoryBadge: "Featured AI Project",
+      subcategoryBadge: "Conversational AI",
+    },
+    {
+      id: "olist-ecommerce-sales-analysis",
+      title: "Olist E-Commerce Sales & BI Analysis",
+      description:
+        "An in-depth data and business intelligence analysis of 90,000+ e-commerce orders on Brazil's largest marketplace platform, utilizing PostgreSQL, Python statistical modeling, and interactive Tableau dashboards.",
+      technologies: [
+        "PostgreSQL",
+        "Python",
+        "Pandas",
+        "SciPy",
+        "Tableau",
+        "SQL",
+        "Exploratory Data Analysis",
+        "Kruskal-Wallis Test",
+        "Mutual Information Regression",
+        "Data Visualization",
+      ],
+      features: [
+        "Modeled partition-level sales growth rates (+22.26% overall YoY growth) and average order values",
+        "Executed non-parametric Kruskal-Wallis hypothesis tests (p = 1.41e-236) on category lead times",
+        "Evaluated Mutual Information regression to quantify delivery impact on customer review scores",
+        "Built interactive executive Tableau dashboards detailing regional fulfillment performance",
+        "Formulated cross-functional recommendations for Sales, Marketing, and Logistics optimization",
+      ],
+      githubUrl: "https://github.com/akshay-john/olist-analysis.git",
+      liveUrl: "https://public.tableau.com/app/profile/owen.xu/viz/OlistDashboard_17235986569100/OlistDashboard",
+      isFeatured: true,
+      categoryBadge: "Featured Analytics Project",
+      subcategoryBadge: "Business Intelligence",
     },
   ],
   skills: [
@@ -117,6 +149,7 @@ export const portfolioData: PortfolioData = {
     {
       category: "Databases",
       skills: [
+        { name: "PostgreSQL", iconName: "Database" },
         { name: "MySQL", iconName: "Database" },
         { name: "SQL Server", iconName: "Server" },
         { name: "SQLite", iconName: "HardDrive" },
@@ -125,6 +158,7 @@ export const portfolioData: PortfolioData = {
     {
       category: "Visualization",
       skills: [
+        { name: "Tableau", iconName: "BarChart3" },
         { name: "Power BI", iconName: "BarChart3" },
         { name: "Matplotlib", iconName: "PieChart" },
         { name: "Seaborn", iconName: "Activity" },

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Bot, CheckCircle, Sparkles } from "lucide-react";
+import { Bot, CheckCircle, ExternalLink, Sparkles } from "lucide-react";
 import { ProjectItem } from "@/types/portfolio";
 
 const GitHubIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
@@ -23,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="glass-card rounded-2xl p-6 sm:p-8 md:p-10 border border-slate-800 hover:border-sky-500/40 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between"
+      className="glass-card rounded-2xl p-6 sm:p-8 md:p-10 border border-slate-800 hover:border-sky-500/40 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full"
     >
       <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-sky-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl pointer-events-none group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -31,13 +31,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-full">
             <Bot className="w-3.5 h-3.5" />
-            <span>Featured AI Project</span>
+            <span>{project.categoryBadge || "Featured Project"}</span>
           </span>
 
-          <span className="inline-flex items-center gap-1 text-xs font-medium text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
-            <Sparkles className="w-3 h-3 text-purple-400" />
-            <span>Conversational AI</span>
-          </span>
+          {project.subcategoryBadge && (
+            <span className="inline-flex items-center gap-1 text-xs font-medium text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+              <Sparkles className="w-3 h-3 text-purple-400" />
+              <span>{project.subcategoryBadge}</span>
+            </span>
+          )}
         </div>
 
         <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
@@ -50,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
         <div className="mb-6 bg-slate-900/60 rounded-xl p-4 border border-slate-800">
           <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-            Key Features & Capabilities
+            Key Features & Insights
           </h4>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {project.features.map((feature, fIndex) => (
@@ -79,7 +81,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </div>
       </div>
 
-      <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+      <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3 justify-between">
         <a
           href={project.githubUrl}
           target="_blank"
@@ -89,7 +91,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <GitHubIcon className="w-4 h-4 text-sky-400 group-hover/btn:scale-110 transition-transform" />
           <span>View Source Code on GitHub</span>
         </a>
+
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-sky-300 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 rounded-xl transition-all shadow-md group/liveBtn"
+          >
+            <ExternalLink className="w-4 h-4 text-sky-400 group-hover/liveBtn:scale-110 transition-transform" />
+            <span>Interactive Dashboard</span>
+          </a>
+        )}
       </div>
     </motion.div>
+  );
+};
   );
 };

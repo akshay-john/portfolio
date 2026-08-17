@@ -36,6 +36,8 @@ export interface ProjectItem {
   githubUrl: string;
   liveUrl?: string;
   isFeatured?: boolean;
+  categoryBadge?: string;
+  subcategoryBadge?: string;
 }
 
 export interface SkillCategory {
