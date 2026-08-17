@@ -12,6 +12,7 @@ export const portfolioData: PortfolioData = {
     github: "https://github.com/akshay-john",
     avatarUrl: "/images/profile.jpg",
     resumeUrl: "/resume/Akshay_John_Resume.pdf",
+    websiteUrl: "https://akshay-john-portfolio-main.vercel.app",
   },
   typingRoles: [
     "Data Scientist",

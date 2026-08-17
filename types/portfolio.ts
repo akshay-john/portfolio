@@ -9,6 +9,7 @@ export interface PersonalInfo {
   github: string;
   avatarUrl: string;
   resumeUrl: string;
+  websiteUrl?: string;
 }
 
 export interface EducationItem {
