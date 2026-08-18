@@ -85,7 +85,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "olist-ecommerce-sales-analysis",
-      title: "Olist E-Commerce Sales & BI Analysis",
+      title: "Olist Ecommerce Analysis",
       description:
         "An in-depth data and business intelligence analysis of 90,000+ e-commerce orders on Brazil's largest marketplace platform, utilizing PostgreSQL, Python statistical modeling, and interactive Tableau dashboards.",
       technologies: [
