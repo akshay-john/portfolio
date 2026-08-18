@@ -42,6 +42,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )}
         </div>
 
+        {project.imageUrl && (
+          <div className="relative mb-5 overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/60 aspect-video group/img">
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              className="w-full h-full object-cover object-top transform group-hover/img:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 pointer-events-none" />
+          </div>
+        )}
+
         <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
           {project.title}
         </h3>

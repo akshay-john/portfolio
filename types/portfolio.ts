@@ -36,6 +36,7 @@ export interface ProjectItem {
   features: string[];
   githubUrl: string;
   liveUrl?: string;
+  imageUrl?: string;
   isFeatured?: boolean;
   categoryBadge?: string;
   subcategoryBadge?: string;

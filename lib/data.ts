@@ -109,6 +109,7 @@ export const portfolioData: PortfolioData = {
       ],
       githubUrl: "https://github.com/akshay-john/olist-analysis.git",
       liveUrl: "https://public.tableau.com/app/profile/owen.xu/viz/OlistDashboard_17235986569100/OlistDashboard",
+      imageUrl: "/images/olist_dashboard.png",
       isFeatured: true,
       categoryBadge: "Featured Analytics Project",
       subcategoryBadge: "Business Intelligence",
